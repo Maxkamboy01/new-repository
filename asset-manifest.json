@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/new-repository/static/css/main.891e2762.chunk.css",
+    "main.js": "/new-repository/static/js/main.9b9383ff.chunk.js",
+    "main.js.map": "/new-repository/static/js/main.9b9383ff.chunk.js.map",
+    "runtime-main.js": "/new-repository/static/js/runtime-main.7b6aeea6.js",
+    "runtime-main.js.map": "/new-repository/static/js/runtime-main.7b6aeea6.js.map",
+    "static/js/2.15f811a6.chunk.js": "/new-repository/static/js/2.15f811a6.chunk.js",
+    "static/js/2.15f811a6.chunk.js.map": "/new-repository/static/js/2.15f811a6.chunk.js.map",
+    "static/js/3.252c31c0.chunk.js": "/new-repository/static/js/3.252c31c0.chunk.js",
+    "static/js/3.252c31c0.chunk.js.map": "/new-repository/static/js/3.252c31c0.chunk.js.map",
+    "index.html": "/new-repository/index.html",
+    "static/css/main.891e2762.chunk.css.map": "/new-repository/static/css/main.891e2762.chunk.css.map",
+    "static/js/2.15f811a6.chunk.js.LICENSE.txt": "/new-repository/static/js/2.15f811a6.chunk.js.LICENSE.txt",
+    "static/media/cloudy.31fb1fdd.svg": "/new-repository/static/media/cloudy.31fb1fdd.svg",
+    "static/media/decreasetemp.ce17cfc3.svg": "/new-repository/static/media/decreasetemp.ce17cfc3.svg",
+    "static/media/humidity.fbabca59.svg": "/new-repository/static/media/humidity.fbabca59.svg",
+    "static/media/increasetemp.6e90b22b.svg": "/new-repository/static/media/increasetemp.6e90b22b.svg",
+    "static/media/latitude.7fe850c7.svg": "/new-repository/static/media/latitude.7fe850c7.svg",
+    "static/media/longitude.8a65f9ae.svg": "/new-repository/static/media/longitude.8a65f9ae.svg",
+    "static/media/thermometer.4d290328.svg": "/new-repository/static/media/thermometer.4d290328.svg",
+    "static/media/windspeed.4a0c41cb.svg": "/new-repository/static/media/windspeed.4a0c41cb.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7b6aeea6.js",
+    "static/js/2.15f811a6.chunk.js",
+    "static/css/main.891e2762.chunk.css",
+    "static/js/main.9b9383ff.chunk.js"
+  ]
+}
