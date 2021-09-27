@@ -29,14 +29,14 @@ import Thunderstorm from "../../assets/images/thunderstorm.svg";
 import Brokenclouds from "../../assets/images/brokenclouds.svg";
 import Mist from "../../assets/images/mist.svg";
 import Snow from "../../assets/images/snow.svg";
-import DefaultClear from "../../assets/images/defaultclear.svg"
+import DefaultClear from "../../assets/images/defaultclear.svg";
 
 function Mainpage() {
   const [weather, setweather] = useState({});
 
   const [state, setstate] = useState([]);
 
-  const [wIcon, setWIcon] = useState("")
+  const [wIcon, setWIcon] = useState("");
 
   const newDate = new Date(Date.now());
   const getmonth = newDate.getMonth();
@@ -106,11 +106,11 @@ function Mainpage() {
     return value.icon;
   });
 
-  useEffect(()=>{
-    setWIcon(getIcon(state?.[0]?.icon))
+  useEffect(() => {
+    setWIcon(getIcon(state?.[0]?.icon));
     console.log(state);
     console.log("hello world");
-  },[state])
+  }, [state]);
 
   const getIcon = (icon) => {
     switch (icon) {
@@ -188,7 +188,7 @@ function Mainpage() {
                   C <br />
                   <span style={{ color: "#aaa", fontSize: "20px" }}>Today</span>
                 </TempText>
-                <FeelsLike>
+                <FeelsLike style={{ marginTop: "auto" }}>
                   <div>
                     <img src={Thermometer} alt="" />
                     <span>feels like</span>
@@ -245,7 +245,7 @@ function Mainpage() {
                   </div>
                   <span>{weather?.main?.humidity + "  "} %</span>
                 </FeelsLike>
-                <FeelsLike>
+                <FeelsLike style={{ marginBottom: "30px" }}>
                   <div>
                     <img src={Windspeed} alt="" />
                     <span>wind speed</span>
@@ -275,7 +275,7 @@ function Mainpage() {
                   </div>
                   <span>{weather?.coord?.lat}</span>
                 </FeelsLike>
-                <FeelsLike style={{ marginTop: "15px" }}>
+                <FeelsLike style={{ marginTop: "15px", marginBottom: "30px" }}>
                   <div>
                     <img src={Longitude} alt="" />
                     <span>Longitude</span>

@@ -98,20 +98,19 @@ export const FlexBox = styled.div`
 
 export const ImgBox = styled.div`
   width: 32%;
+  height: 100%;
   height: fit-content;
   display: flex;
   flex-direction: column;
   img {
-    width: 340px;
-    margin: -100px 0;
-    margin-bottom: -100px;
+    width: 300px;
+    margin: 0 auto;
   }
   h3 {
     font-size: 35px;
     font-weight: bold;
-    text-align: left;
     letter-spacing: 4px;
-    margin-top: 80px;
+    margin-top: 50px;
     margin-bottom: 0;
     .h2 {
       font-size: 24px;
@@ -119,8 +118,7 @@ export const ImgBox = styled.div`
       letter-spacing: 6px;
       color: #444;
       margin: 5px;
-      margin-right: 10px;
-      text-align: right;
+      margin-left: 15px;
     }
   }
 `;
@@ -141,6 +139,7 @@ export const TextsBox = styled.div`
 export const MapBox = styled.div`
   width: 40%;
   margin-left: auto;
+  margin-top: auto;
 `;
 
 export const TempText = styled.h2`
@@ -164,6 +163,7 @@ export const FeelsLike = styled.div`
   justify-content: space-between;
   font-family: "Underdog", cursive;
   margin-bottom: 13px;
+  
   div {
     display: flex;
     align-items: center;
