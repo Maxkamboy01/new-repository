@@ -117,54 +117,42 @@ function Mainpage() {
     switch (icon) {
       case "01d":
         return Clear;
+      case "01n":
+        return Clear;
       case "02d":
+        return Fewclouds;
+      case "02n":
         return Fewclouds;
       case "03d":
         return Scattered;
+      case "03n":
+        return Scattered;
       case "04d":
+        return Brokenclouds;
+      case "04n":
         return Brokenclouds;
       case "09d":
         return ShowerRain;
+      case "09n":
+        return ShowerRain;
       case "10d":
+        return Rain;
+      case "10n":
         return Rain;
       case "11d":
         return Thunderstorm;
+      case "11n":
+        return Thunderstorm;
       case "13d":
+        return Snow;
+      case "13n":
         return Snow;
       case "50d":
         return Mist;
+      case "50n":
+        return Mist;
       default:
-        if (
-          Id == 500 &&
-          Id == 501 &&
-          Id == 502 &&
-          Id == 503 &&
-          Id == 504 &&
-          Id == 511 &&
-          Id == 520 &&
-          Id == 521 &&
-          Id == 531
-        ) {
-          return (Icon = Rain);
-        } else if (
-          Id == 701 &&
-          Id == 711 &&
-          Id == 721 &&
-          Id == 731 &&
-          Id == 741 &&
-          Id == 751 &&
-          Id == 761 &&
-          Id == 762 &&
-          Id == 781
-        ) {
-          return (Icon = Mist);
-        } else if (Id == 800) {
-          return (Icon = Clear);
-        } else if (Id == 801 && Id == 802 && Id == 803 && Id == 804) {
-          return (Icon = Scattered);
-        } else {
-          return (Icon = Clear);
-        }
+        return Clear
     }
   };
 
