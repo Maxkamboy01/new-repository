@@ -42,6 +42,9 @@ function Mainpage() {
   const getmonth = newDate.getMonth();
   const getyear = newDate.getFullYear();
   const getday = newDate.getDate();
+  const gethours = newDate.getHours();
+  const getminutes = newDate.getMinutes();
+  const getseconds = newDate.getSeconds();
 
   const monthSwitch = (monthInNumber) => {
     switch (monthInNumber) {
@@ -152,7 +155,7 @@ function Mainpage() {
       case "50n":
         return Mist;
       default:
-        return Clear
+        return Clear;
     }
   };
 
@@ -180,16 +183,15 @@ function Mainpage() {
               {weather?.name != undefined ? monthSwitch(getmonth) : ""}
               {weather.name != undefined ? getday + "," : ""}
               {weather.name != undefined ? " " + getyear : ""}
+              <br />
+              {weather?.name != undefined ? "  " + gethours + ":" : ""}
+              {weather?.name != undefined ? getminutes + ":" : ""}
+              {weather?.name != undefined ? getseconds : ""}
             </p>
           </h2>
           <FlexBox>
             <ImgBox>
-              <img
-                id="iconimg"
-                // src={`http://openweathermap.org/img/wn/${Icon}.png`}
-                src={wIcon}
-                alt="It might take a few minutes"
-              />
+              <img id="iconimg" src={wIcon} alt="It might take a few minutes" />
               {state.map((station) => (
                 <h3 key={station.id}>
                   {station?.main}
@@ -205,7 +207,7 @@ function Mainpage() {
                     <i className="fas fa-genderless"></i>
                   </sup>
                   C <br />
-                  <span style={{ color: "#aaa", fontSize: "20px" }}>Today</span>
+                  <span style={{ color: "#777", fontSize: "20px" }}>Today</span>
                 </TempText>
                 <FeelsLike style={{ marginTop: "auto" }}>
                   <div>

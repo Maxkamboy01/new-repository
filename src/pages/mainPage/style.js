@@ -127,6 +127,7 @@ export const DisplayFlex = styled.div`
   display: flex;
   justify-content: space-between;
   width: 68%;
+  margin-top: -20px;
 `;
 
 export const TextsBox = styled.div`
@@ -147,7 +148,6 @@ export const TempText = styled.h2`
   text-align: center;
   color: #777;
   font-family: "Underdog", cursive;
-
   span {
     color: #ffbf2b;
   }
@@ -163,7 +163,7 @@ export const FeelsLike = styled.div`
   justify-content: space-between;
   font-family: "Underdog", cursive;
   margin-bottom: 13px;
-  
+
   div {
     display: flex;
     align-items: center;
