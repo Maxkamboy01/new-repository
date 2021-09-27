@@ -146,6 +146,18 @@ function Mainpage() {
           Id == 531
         ) {
           return Icon == Rain;
+        } else if (
+          Id == 701 &&
+          Id == 711 &&
+          Id == 721 &&
+          Id == 731 &&
+          Id == 741 &&
+          Id == 751 &&
+          Id == 761 &&
+          Id == 762 &&
+          Id == 781
+        ) {
+          return Icon == Mist;
         } else if (Id == 800) {
           return Icon == Clear;
         } else if (Id == 801 && Id == 802 && Id == 803 && Id == 804) {
