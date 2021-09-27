@@ -102,14 +102,15 @@ function Mainpage() {
   }, []);
 
   const Icon = state?.map((value) => {
-    console.log(value.icon);
     return value.icon;
+  });
+
+  const Id = state?.map((value) => {
+    return value.id;
   });
 
   useEffect(() => {
     setWIcon(getIcon(state?.[0]?.icon));
-    console.log(state);
-    console.log("hello world");
   }, [state]);
 
   const getIcon = (icon) => {
@@ -133,7 +134,25 @@ function Mainpage() {
       case "50d":
         return Mist;
       default:
-        return DefaultClear;
+        if (
+          Id == 500 &&
+          Id == 501 &&
+          Id == 502 &&
+          Id == 503 &&
+          Id == 504 &&
+          Id == 511 &&
+          Id == 520 &&
+          Id == 521 &&
+          Id == 531
+        ) {
+          return Icon == Rain;
+        } else if (Id == 800) {
+          return Icon == Clear;
+        } else if (Id == 801 && Id == 802 && Id == 803 && Id == 804) {
+          return Icon == Scattered;
+        } else {
+          return Icon == Clear;
+        }
     }
   };
 
@@ -169,7 +188,7 @@ function Mainpage() {
                 id="iconimg"
                 // src={`http://openweathermap.org/img/wn/${Icon}.png`}
                 src={wIcon}
-                alt="there is no weather icon here"
+                alt="It might take a few minutes"
               />
               {state.map((station) => (
                 <h3 key={station.id}>
