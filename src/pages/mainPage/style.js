@@ -104,7 +104,6 @@ export const ImgBox = styled.div`
   img {
     width: 340px;
     margin: -100px 0;
-    margin-left: auto;
     margin-bottom: -100px;
   }
   h3 {
