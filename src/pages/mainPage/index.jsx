@@ -145,7 +145,7 @@ function Mainpage() {
           Id == 521 &&
           Id == 531
         ) {
-          return Icon == Rain;
+          return (Icon = Rain);
         } else if (
           Id == 701 &&
           Id == 711 &&
@@ -157,13 +157,13 @@ function Mainpage() {
           Id == 762 &&
           Id == 781
         ) {
-          return Icon == Mist;
+          return (Icon = Mist);
         } else if (Id == 800) {
-          return Icon == Clear;
+          return (Icon = Clear);
         } else if (Id == 801 && Id == 802 && Id == 803 && Id == 804) {
-          return Icon == Scattered;
+          return (Icon = Scattered);
         } else {
-          return Icon == Clear;
+          return (Icon = Clear);
         }
     }
   };
