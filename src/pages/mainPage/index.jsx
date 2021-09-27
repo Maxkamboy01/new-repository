@@ -13,7 +13,6 @@ import {
   DisplayFlex,
   MapBox,
 } from "./style";
-import Icon from "../../assets/images/cloudy.svg";
 import Thermometer from "../../assets/images/thermometer.svg";
 import Hightemp from "../../assets/images/increasetemp.svg";
 import Lowtemp from "../../assets/images/decreasetemp.svg";
@@ -21,11 +20,23 @@ import Humidity from "../../assets/images/humidity.svg";
 import Windspeed from "../../assets/images/windspeed.svg";
 import Latitude from "../../assets/images/latitude.svg";
 import Longitude from "../../assets/images/longitude.svg";
+import Clear from "../../assets/images/clear-sky.svg";
+import ShowerRain from "../../assets/images/rain.svg";
+import Rain from "../../assets/images/showerrain.svg";
+import Scattered from "../../assets/images/scattered.svg";
+import Fewclouds from "../../assets/images/scattered.svg";
+import Thunderstorm from "../../assets/images/thunderstorm.svg";
+import Brokenclouds from "../../assets/images/brokenclouds.svg";
+import Mist from "../../assets/images/mist.svg";
+import Snow from "../../assets/images/snow.svg";
+import DefaultClear from "../../assets/images/defaultclear.svg"
 
 function Mainpage() {
   const [weather, setweather] = useState({});
 
   const [state, setstate] = useState([]);
+
+  const [wIcon, setWIcon] = useState("")
 
   const newDate = new Date(Date.now());
   const getmonth = newDate.getMonth();
@@ -90,11 +101,41 @@ function Mainpage() {
     getPlace();
   }, []);
 
-
-
   const Icon = state?.map((value) => {
+    console.log(value.icon);
     return value.icon;
   });
+
+  useEffect(()=>{
+    setWIcon(getIcon(state?.[0]?.icon))
+    console.log(state);
+    console.log("hello world");
+  },[state])
+
+  const getIcon = (icon) => {
+    switch (icon) {
+      case "01d":
+        return Clear;
+      case "02d":
+        return Fewclouds;
+      case "03d":
+        return Scattered;
+      case "04d":
+        return Brokenclouds;
+      case "09d":
+        return ShowerRain;
+      case "10d":
+        return Rain;
+      case "11d":
+        return Thunderstorm;
+      case "13d":
+        return Snow;
+      case "50d":
+        return Mist;
+      default:
+        return DefaultClear;
+    }
+  };
 
   return (
     <Wrapperstyle>
@@ -126,7 +167,8 @@ function Mainpage() {
             <ImgBox>
               <img
                 id="iconimg"
-                src={`http://openweathermap.org/img/wn/${Icon}.png`}
+                // src={`http://openweathermap.org/img/wn/${Icon}.png`}
+                src={wIcon}
                 alt="there is no weather icon here"
               />
               {state.map((station) => (
